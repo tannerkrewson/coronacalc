@@ -1,10 +1,7 @@
-.App {
+.Calculator-content {
 	position: relative;
-	max-width: 600px;
+	max-width: 512px;
 	margin: 0 auto;
 	padding: 16px;
-}
-
-.App-header {
 	text-align: center;
 }

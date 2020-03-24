@@ -11,13 +11,12 @@ class QuestionIncome extends React.Component {
 
 	handleInputChange(value) {
 		const newState = {
-			income: value || 0,
+			income: value,
 		};
 		this.setState(newState);
 		this.props.onChange(newState);
 	}
 	onClickNext() {
-		//wrapper to prevent click event info from being sent and interfering with newQuestionst
 		this.props.onNext();
 	}
 

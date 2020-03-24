@@ -16,7 +16,7 @@ class QuestionDep extends React.Component {
 		};
 		this.setState(newState);
 		this.props.onChange(newState);
-		this.props.onNext();
+		this.props.onNext(null, 1);
 	}
 
 	showInputNumber() {

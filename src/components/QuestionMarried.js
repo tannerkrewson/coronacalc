@@ -18,11 +18,7 @@ class QuestionMarried extends React.Component {
 		};
 		this.setState(newState);
 		this.props.onChange(newState);
-		const additionalQuestions = [];
-		if (isMarried) {
-			additionalQuestions.push(QuestionSpouseIncome);
-		}
-		this.props.onNext(additionalQuestions);
+		this.props.onNext();
 	}
 
 	render = () => (
