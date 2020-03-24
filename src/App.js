@@ -1,4 +1,5 @@
 import React from 'react';
+import Calculator from './components/Calculator'
 import './App.css';
 
 function App() {
@@ -6,12 +7,13 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h2>
-          US Coronavirus Check Calculator
+          Check Calculator
         </h2>
         <p>
-          The average American will receive $1500. How much will you get?
+          ----
         </p>
       </header>
+      <Calculator/>
     </div>
   );
 }
