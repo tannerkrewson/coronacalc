@@ -1,17 +1,17 @@
 import React from "react";
 import { InputNumber, Button } from "antd";
 
-class QuestionIncome extends React.Component {
+class QuestionSpouseIncome extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			income: 0,
+			spouseIncome: 0,
 		};
 	}
 
 	handleInputChange(value) {
 		const newState = {
-			income: value,
+			spouseIncome: value,
 		};
 		this.setState(newState);
 		this.props.onChange(newState);
@@ -23,7 +23,7 @@ class QuestionIncome extends React.Component {
 
 	render = () => (
 		<div>
-			<div>How much did you make in 2019?</div>
+			<div>How much did your spouse make in 2019?</div>
 			<div>
 				<InputNumber
 					name="income"
@@ -33,7 +33,7 @@ class QuestionIncome extends React.Component {
 						`$ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 					}
 					parser={(value) => value.replace(/\$\s?|(,*)/g, "")}
-					value={this.state.income}
+					value={this.state.spouseIncome}
 					onChange={this.handleInputChange.bind(this)}
 				/>
 			</div>
@@ -42,4 +42,4 @@ class QuestionIncome extends React.Component {
 	);
 }
 
-export default QuestionIncome;
+export default QuestionSpouseIncome;

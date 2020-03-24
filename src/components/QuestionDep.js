@@ -1,11 +1,12 @@
 import React from "react";
-import { InputNumber } from "antd";
+import { InputNumber, Button } from "antd";
 
 class QuestionDep extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			dependants: 0,
+			showInputNumber: false,
 		};
 	}
 
@@ -15,20 +16,37 @@ class QuestionDep extends React.Component {
 		};
 		this.setState(newState);
 		this.props.onChange(newState);
+		this.props.onNext();
+	}
+
+	showInputNumber() {
+		this.setState({ showInputNumber: true });
 	}
 
 	render = () => (
 		<div>
 			<div>How many dependants do you have?</div>
-			<div>
-				<InputNumber
-					name="dependants"
-					min={0}
-					max={100}
-					value={this.state.dependants}
-					onChange={this.handleInputChange.bind(this)}
-				/>
-			</div>
+			{!this.state.showInputNumber && (
+				<div>
+					<Button onClick={() => this.handleInputChange(0)}>None</Button>
+					<Button onClick={() => this.handleInputChange(1)}>1</Button>
+					<Button onClick={() => this.handleInputChange(2)}>2</Button>
+					<Button onClick={() => this.handleInputChange(3)}>3</Button>
+					<Button onClick={() => this.handleInputChange(4)}>4</Button>
+					<Button onClick={() => this.showInputNumber()}>More</Button>
+				</div>
+			)}
+			{this.state.showInputNumber && (
+				<div>
+					<InputNumber
+						name="dependants"
+						min={0}
+						max={100}
+						value={this.state.dependants}
+						onChange={this.handleInputChange.bind(this)}
+					/>
+				</div>
+			)}
 		</div>
 	);
 }
