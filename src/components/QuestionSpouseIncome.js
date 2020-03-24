@@ -17,13 +17,12 @@ class QuestionSpouseIncome extends React.Component {
 		this.props.onChange(newState);
 	}
 	onClickNext() {
-		//wrapper to prevent click event info from being sent and interfering with newQuestionst
 		this.props.onNext();
 	}
 
 	render = () => (
 		<div>
-			<div>How much did your spouse make in 2019?</div>
+			<h3>How much did your spouse make in 2019?</h3>
 			<div>
 				<InputNumber
 					name="income"
@@ -37,6 +36,7 @@ class QuestionSpouseIncome extends React.Component {
 					onChange={this.handleInputChange.bind(this)}
 				/>
 			</div>
+			<br />
 			<Button onClick={this.onClickNext.bind(this)}>Next</Button>
 		</div>
 	);

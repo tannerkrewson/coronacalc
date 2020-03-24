@@ -22,7 +22,7 @@ class QuestionIncome extends React.Component {
 
 	render = () => (
 		<div>
-			<div>How much did you make in 2019?</div>
+			<h3>How much did you make in 2019?</h3>
 			<div>
 				<InputNumber
 					name="income"
@@ -36,6 +36,7 @@ class QuestionIncome extends React.Component {
 					onChange={this.handleInputChange.bind(this)}
 				/>
 			</div>
+			<br />
 			<Button onClick={this.onClickNext.bind(this)}>Next</Button>
 		</div>
 	);

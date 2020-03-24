@@ -8,3 +8,9 @@
 .App-header {
 	text-align: center;
 }
+
+footer {
+	margin-top: 1em;
+	text-align: center;
+	font-size: 0.9em;
+}

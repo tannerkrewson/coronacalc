@@ -23,9 +23,9 @@ class QuestionMarried extends React.Component {
 
 	render = () => (
 		<div>
-			<div>Are you married?</div>
+			<h3>Are you married?</h3>
 			<div>
-				<Button onClick={() => this.handleInputChange("yes")}>Yes</Button>
+				<Button onClick={() => this.handleInputChange("yes")}>Yes</Button>{" "}
 				<Button onClick={() => this.handleInputChange("no")}>No</Button>
 			</div>
 		</div>

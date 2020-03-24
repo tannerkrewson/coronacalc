@@ -25,22 +25,22 @@ class QuestionDep extends React.Component {
 
 	render = () => (
 		<div>
-			<div>How many dependants do you have?</div>
+			<h3>How many dependants do you have?</h3>
 			{!this.state.showInputNumber && (
 				<div>
-					<Button onClick={() => this.handleInputChange(0)}>None</Button>
+					<Button onClick={() => this.handleInputChange(0)}>None</Button>{" "}
 					<Button shape="circle" onClick={() => this.handleInputChange(1)}>
 						1
-					</Button>
+					</Button>{" "}
 					<Button shape="circle" onClick={() => this.handleInputChange(2)}>
 						2
-					</Button>
+					</Button>{" "}
 					<Button shape="circle" onClick={() => this.handleInputChange(3)}>
 						3
-					</Button>
+					</Button>{" "}
 					<Button shape="circle" onClick={() => this.handleInputChange(4)}>
 						4
-					</Button>
+					</Button>{" "}
 					<Button onClick={() => this.showInputNumber()}>More</Button>
 				</div>
 			)}
