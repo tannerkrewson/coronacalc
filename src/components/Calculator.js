@@ -3,18 +3,20 @@ import { Card, Button } from "antd";
 import QuestionMarried from "./QuestionMarried";
 import QuestionDep from "./QuestionDep";
 import QuestionIncome from "./QuestionIncome";
+import Results from "./Results";
 
 class Calculator extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			step: 0,
-			formData: {},
+			formData: { income: 0, spouseIncome: 0, married: false, dependants: 0 },
+			done: false,
 		};
 		this.questions = [QuestionMarried, QuestionDep, QuestionIncome];
 	}
-	onChange(newState) {
-		this.setState({ ...this.state, ...newState });
+	onChange(newFormData) {
+		this.setState({ formData: { ...this.state.formData, ...newFormData } });
 	}
 	onNext(addQuestions = []) {
 		console.log(addQuestions);
@@ -22,7 +24,7 @@ class Calculator extends React.Component {
 		this.questions = [...this.questions, ...addQuestions];
 
 		if (this.state.step === this.questions.length - 1) {
-			alert("done");
+			this.setState({ done: true });
 			return;
 		}
 		this.setState({ step: this.state.step + 1 });
@@ -32,10 +34,13 @@ class Calculator extends React.Component {
 		const Question = this.questions[this.state.step];
 		return (
 			<Card>
-				<Question
-					onChange={this.onChange.bind(this)}
-					onNext={this.onNext.bind(this)}
-				/>
+				{!this.state.done && (
+					<Question
+						onChange={this.onChange.bind(this)}
+						onNext={this.onNext.bind(this)}
+					/>
+				)}
+				{this.state.done && <Results formData={this.state.formData} />}
 			</Card>
 		);
 	};

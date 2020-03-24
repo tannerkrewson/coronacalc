@@ -29,10 +29,18 @@ class QuestionDep extends React.Component {
 			{!this.state.showInputNumber && (
 				<div>
 					<Button onClick={() => this.handleInputChange(0)}>None</Button>
-					<Button onClick={() => this.handleInputChange(1)}>1</Button>
-					<Button onClick={() => this.handleInputChange(2)}>2</Button>
-					<Button onClick={() => this.handleInputChange(3)}>3</Button>
-					<Button onClick={() => this.handleInputChange(4)}>4</Button>
+					<Button shape="circle" onClick={() => this.handleInputChange(1)}>
+						1
+					</Button>
+					<Button shape="circle" onClick={() => this.handleInputChange(2)}>
+						2
+					</Button>
+					<Button shape="circle" onClick={() => this.handleInputChange(3)}>
+						3
+					</Button>
+					<Button shape="circle" onClick={() => this.handleInputChange(4)}>
+						4
+					</Button>
 					<Button onClick={() => this.showInputNumber()}>More</Button>
 				</div>
 			)}

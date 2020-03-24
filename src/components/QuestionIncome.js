@@ -11,7 +11,7 @@ class QuestionIncome extends React.Component {
 
 	handleInputChange(value) {
 		const newState = {
-			income: value,
+			income: value || 0,
 		};
 		this.setState(newState);
 		this.props.onChange(newState);
