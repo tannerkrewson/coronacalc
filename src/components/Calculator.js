@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Button } from "antd";
+import { UndoOutlined } from "@ant-design/icons";
 import QuestionMarried from "./QuestionMarried";
 import QuestionDep from "./QuestionDep";
 import QuestionIncome from "./QuestionIncome";
@@ -45,6 +46,9 @@ class Calculator extends React.Component {
 	currentQuestion() {
 		return this.questions[this.state.questionStep] || { question: <div></div> };
 	}
+	reset() {
+		window.location.reload();
+	}
 	render = () => {
 		const Question = this.currentQuestion().question;
 		return (
@@ -56,6 +60,15 @@ class Calculator extends React.Component {
 						onNext={this.onNext.bind(this)}
 						formData={this.state.formData}
 					/>
+					<br />
+					<Button
+						type="dashed"
+						size="small"
+						icon={<UndoOutlined />}
+						onClick={this.reset.bind(this)}
+					>
+						Reset
+					</Button>
 				</div>
 			</Card>
 		);

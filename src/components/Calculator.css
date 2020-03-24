@@ -3,5 +3,6 @@
 	max-width: 512px;
 	margin: 0 auto;
 	padding: 16px;
+	padding-bottom: 0;
 	text-align: center;
 }
