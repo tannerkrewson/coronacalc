@@ -1,17 +1,17 @@
 import React from "react";
 import { InputNumber } from "antd";
 
-class QuestionDep extends React.Component {
+class QuestionIncome extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			dependants: 0,
+			income: 0,
 		};
 	}
 
 	handleInputChange(value) {
 		const newState = {
-			dependants: value,
+			income: value,
 		};
 		this.setState(newState);
 		this.props.onChange(newState);
@@ -19,13 +19,13 @@ class QuestionDep extends React.Component {
 
 	render = () => (
 		<div>
-			<div>How many dependants do you have?</div>
+			<div>How much did you make in 2019?</div>
 			<div>
 				<InputNumber
-					name="dependants"
+					name="income"
 					min={0}
-					max={100}
-					value={this.state.dependants}
+					max={9999999999}
+					value={this.state.income}
 					onChange={this.handleInputChange.bind(this)}
 				/>
 			</div>
@@ -33,4 +33,4 @@ class QuestionDep extends React.Component {
 	);
 }
 
-export default QuestionDep;
+export default QuestionIncome;
