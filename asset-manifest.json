@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/coronacalc/static/css/main.7ed11376.chunk.css",
-    "main.js": "/coronacalc/static/js/main.a079d609.chunk.js",
-    "main.js.map": "/coronacalc/static/js/main.a079d609.chunk.js.map",
+    "main.js": "/coronacalc/static/js/main.bacb88aa.chunk.js",
+    "main.js.map": "/coronacalc/static/js/main.bacb88aa.chunk.js.map",
     "runtime-main.js": "/coronacalc/static/js/runtime-main.83a58b1a.js",
     "runtime-main.js.map": "/coronacalc/static/js/runtime-main.83a58b1a.js.map",
     "static/css/2.2fbe55bd.chunk.css": "/coronacalc/static/css/2.2fbe55bd.chunk.css",
     "static/js/2.7d4503fa.chunk.js": "/coronacalc/static/js/2.7d4503fa.chunk.js",
     "static/js/2.7d4503fa.chunk.js.map": "/coronacalc/static/js/2.7d4503fa.chunk.js.map",
     "index.html": "/coronacalc/index.html",
-    "precache-manifest.bfcd0e0fb2ae2ad8befd2637b0ce7025.js": "/coronacalc/precache-manifest.bfcd0e0fb2ae2ad8befd2637b0ce7025.js",
+    "precache-manifest.61026a8c282b390238f8ea4f99824360.js": "/coronacalc/precache-manifest.61026a8c282b390238f8ea4f99824360.js",
     "service-worker.js": "/coronacalc/service-worker.js",
     "static/css/2.2fbe55bd.chunk.css.map": "/coronacalc/static/css/2.2fbe55bd.chunk.css.map",
     "static/css/main.7ed11376.chunk.css.map": "/coronacalc/static/css/main.7ed11376.chunk.css.map",
@@ -22,6 +22,6 @@
     "static/css/2.2fbe55bd.chunk.css",
     "static/js/2.7d4503fa.chunk.js",
     "static/css/main.7ed11376.chunk.css",
-    "static/js/main.a079d609.chunk.js"
+    "static/js/main.bacb88aa.chunk.js"
   ]
 }
