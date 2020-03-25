@@ -1,1 +1,0 @@
-{"version":3,"sources":["App.css"],"names":[],"mappings":"AAAA,KACC,iBAAkB,CAClB,eAAgB,CAChB,aAAc,CACd,YACD,CAEA,YACC,iBACD","file":"main.19148550.chunk.css","sourcesContent":[".App {\n\tposition: relative;\n\tmax-width: 500px;\n\tmargin: 0 auto;\n\tpadding: 16px;\n}\n\n.App-header {\n\ttext-align: center;\n}\n"]}

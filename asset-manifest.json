@@ -1,25 +1,27 @@
 {
   "files": {
-    "main.css": "/coronavirus-check-calculator/static/css/main.19148550.chunk.css",
-    "main.js": "/coronavirus-check-calculator/static/js/main.501b74a6.chunk.js",
-    "main.js.map": "/coronavirus-check-calculator/static/js/main.501b74a6.chunk.js.map",
+    "main.css": "/coronavirus-check-calculator/static/css/main.98148794.chunk.css",
+    "main.js": "/coronavirus-check-calculator/static/js/main.5e465aca.chunk.js",
+    "main.js.map": "/coronavirus-check-calculator/static/js/main.5e465aca.chunk.js.map",
     "runtime-main.js": "/coronavirus-check-calculator/static/js/runtime-main.f59bcf3c.js",
     "runtime-main.js.map": "/coronavirus-check-calculator/static/js/runtime-main.f59bcf3c.js.map",
     "static/css/2.2fbe55bd.chunk.css": "/coronavirus-check-calculator/static/css/2.2fbe55bd.chunk.css",
-    "static/js/2.1cac7cd8.chunk.js": "/coronavirus-check-calculator/static/js/2.1cac7cd8.chunk.js",
-    "static/js/2.1cac7cd8.chunk.js.map": "/coronavirus-check-calculator/static/js/2.1cac7cd8.chunk.js.map",
+    "static/js/2.10a1df9a.chunk.js": "/coronavirus-check-calculator/static/js/2.10a1df9a.chunk.js",
+    "static/js/2.10a1df9a.chunk.js.map": "/coronavirus-check-calculator/static/js/2.10a1df9a.chunk.js.map",
     "index.html": "/coronavirus-check-calculator/index.html",
-    "precache-manifest.09cd6af4961d1202d4f2e76fc5c5e389.js": "/coronavirus-check-calculator/precache-manifest.09cd6af4961d1202d4f2e76fc5c5e389.js",
+    "precache-manifest.a9f83223421757340f786468fe4e7a35.js": "/coronavirus-check-calculator/precache-manifest.a9f83223421757340f786468fe4e7a35.js",
     "service-worker.js": "/coronavirus-check-calculator/service-worker.js",
     "static/css/2.2fbe55bd.chunk.css.map": "/coronavirus-check-calculator/static/css/2.2fbe55bd.chunk.css.map",
-    "static/css/main.19148550.chunk.css.map": "/coronavirus-check-calculator/static/css/main.19148550.chunk.css.map",
-    "static/js/2.1cac7cd8.chunk.js.LICENSE.txt": "/coronavirus-check-calculator/static/js/2.1cac7cd8.chunk.js.LICENSE.txt"
+    "static/css/main.98148794.chunk.css.map": "/coronavirus-check-calculator/static/css/main.98148794.chunk.css.map",
+    "static/js/2.10a1df9a.chunk.js.LICENSE.txt": "/coronavirus-check-calculator/static/js/2.10a1df9a.chunk.js.LICENSE.txt",
+    "static/media/Flag_of_the_United_States.aefba3fe.svg": "/coronavirus-check-calculator/static/media/Flag_of_the_United_States.aefba3fe.svg",
+    "static/media/covid19.png": "/coronavirus-check-calculator/static/media/covid19.6a3c8e06.png"
   },
   "entrypoints": [
     "static/js/runtime-main.f59bcf3c.js",
     "static/css/2.2fbe55bd.chunk.css",
-    "static/js/2.1cac7cd8.chunk.js",
-    "static/css/main.19148550.chunk.css",
-    "static/js/main.501b74a6.chunk.js"
+    "static/js/2.10a1df9a.chunk.js",
+    "static/css/main.98148794.chunk.css",
+    "static/js/main.5e465aca.chunk.js"
   ]
 }
