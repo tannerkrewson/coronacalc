@@ -17,6 +17,8 @@ class QuestionIncome extends React.Component {
 		this.props.onNext({ income: this.state.income });
 	}
 
+	handleFocus = (event) => event.target.select();
+
 	render = () => (
 		<div>
 			<h3>{this.props.question || "How much did you make in 2019?"}</h3>
@@ -32,9 +34,10 @@ class QuestionIncome extends React.Component {
 					value={this.state.income}
 					parser={(value) => value.replace(/\$\s?|(,*)/g, "")}
 					onChange={this.handleInputChange.bind(this)}
-					onPressEnter={this.props.onNext}
+					onPressEnter={this.next.bind(this)}
 					style={{ width: "12em" }}
 					autoFocus={true}
+					onFocus={this.handleFocus}
 				/>
 			</div>
 			<br />

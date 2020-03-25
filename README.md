@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Coronavirus Relief Payment Calculator
+
+### tannerkrewson.com/coronacalc
 
 ## Available Scripts
 

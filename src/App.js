@@ -24,7 +24,7 @@ class App extends React.Component {
 				</Card>
 
 				<footer>
-					Coronavirus Check Calculator by{" "}
+					Coronavirus Relief Payment Calculator by{" "}
 					<a
 						href="https://www.tannerkrewson.com/"
 						target="_blank"
@@ -34,7 +34,7 @@ class App extends React.Component {
 					</a>
 					<br />
 					<a
-						href="https://github.com/tannerkrewson/coronavirus-check-calculator"
+						href="https://github.com/tannerkrewson/coronacalc"
 						target="_blank"
 						rel="noopener noreferrer"
 					>

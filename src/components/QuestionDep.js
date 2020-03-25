@@ -29,6 +29,8 @@ class QuestionDep extends React.Component {
 		this.setState({ showInputNumber: true });
 	}
 
+	handleFocus = (event) => event.target.select();
+
 	render = () => (
 		<div>
 			<h3>How many dependants do you have?</h3>
@@ -47,6 +49,9 @@ class QuestionDep extends React.Component {
 					<Button shape="circle" onClick={() => this.buttonNext(4)}>
 						4
 					</Button>{" "}
+					<Button shape="circle" onClick={() => this.buttonNext(5)}>
+						5
+					</Button>{" "}
 					<Button onClick={() => this.showInputNumber()}>More</Button>
 				</div>
 			)}
@@ -58,8 +63,9 @@ class QuestionDep extends React.Component {
 						max={100}
 						value={this.state.dependants}
 						onChange={this.handleInputChange.bind(this)}
-						onPressEnter={this.props.onNext}
+						onPressEnter={this.next.bind(this)}
 						autoFocus={true}
+						onFocus={this.handleFocus}
 					/>
 					<br />
 					<br />
