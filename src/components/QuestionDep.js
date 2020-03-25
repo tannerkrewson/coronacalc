@@ -10,14 +10,19 @@ class QuestionDep extends React.Component {
 		};
 	}
 
-	handleInputChange(dependants) {
-		this.setState({
+	async handleInputChange(dependants) {
+		await this.setState({
 			dependants,
 		});
 	}
 
-	next(dependants) {
-		this.props.onNext({ dependants });
+	async buttonNext(dependants) {
+		await this.handleInputChange(dependants);
+		this.next();
+	}
+
+	next() {
+		this.props.onNext({ dependants: this.state.dependants });
 	}
 
 	showInputNumber() {
@@ -30,16 +35,16 @@ class QuestionDep extends React.Component {
 			{!this.state.showInputNumber && (
 				<div>
 					<Button onClick={() => this.next(0)}>None</Button>{" "}
-					<Button shape="circle" onClick={() => this.next(1)}>
+					<Button shape="circle" onClick={() => this.buttonNext(1)}>
 						1
 					</Button>{" "}
-					<Button shape="circle" onClick={() => this.next(2)}>
+					<Button shape="circle" onClick={() => this.buttonNext(2)}>
 						2
 					</Button>{" "}
-					<Button shape="circle" onClick={() => this.next(3)}>
+					<Button shape="circle" onClick={() => this.buttonNext(3)}>
 						3
 					</Button>{" "}
-					<Button shape="circle" onClick={() => this.next(4)}>
+					<Button shape="circle" onClick={() => this.buttonNext(4)}>
 						4
 					</Button>{" "}
 					<Button onClick={() => this.showInputNumber()}>More</Button>
@@ -56,6 +61,7 @@ class QuestionDep extends React.Component {
 						onPressEnter={this.props.onNext}
 						autoFocus={true}
 					/>
+					<br />
 					<br />
 					<Button onClick={this.next.bind(this)}>Next</Button>
 				</div>

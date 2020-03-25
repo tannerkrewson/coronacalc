@@ -1,6 +1,6 @@
 import React from "react";
-import { Card, Button } from "antd";
-import { UndoOutlined } from "@ant-design/icons";
+import { Button } from "antd";
+import { DeleteOutlined, LeftCircleOutlined } from "@ant-design/icons";
 import QuestionMarried from "./QuestionMarried";
 import QuestionDep from "./QuestionDep";
 import QuestionIncome from "./QuestionIncome";
@@ -48,10 +48,18 @@ class Calculator extends React.Component {
 	reset() {
 		this.setState({ questionStep: 0 });
 	}
+	async back() {
+		do {
+			if (this.state.questionStep === 0) {
+				this.props.history.push("/");
+			}
+			await this.setState({ questionStep: this.state.questionStep - 1 });
+		} while (!this.currentQuestion().shouldAsk());
+	}
 	render = () => {
 		const Question = this.currentQuestion().question;
 		return (
-			<Card>
+			<div>
 				<StepsOverview step={this.currentQuestion().overviewStep} />
 				<div className="Calculator-content">
 					<Question
@@ -62,13 +70,23 @@ class Calculator extends React.Component {
 					<Button
 						type="dashed"
 						size="small"
-						icon={<UndoOutlined />}
+						icon={<LeftCircleOutlined />}
+						onClick={this.back.bind(this)}
+					>
+						Back
+					</Button>
+					{"    "}
+					<Button
+						type="dashed"
+						size="small"
+						icon={<DeleteOutlined />}
 						onClick={this.reset.bind(this)}
+						disabled={this.state.questionStep === 0}
 					>
 						Reset
 					</Button>
 				</div>
-			</Card>
+			</div>
 		);
 	};
 }

@@ -1,54 +1,48 @@
 import React from "react";
+import { Card } from "antd";
+import { MemoryRouter as Router, Switch, Route } from "react-router-dom";
+
+import Header from "./components/Header";
+import Intro from "./components/Intro";
 import Calculator from "./components/Calculator";
 import "./App.css";
-import covid19 from "./static/covid19.png";
-import { ReactComponent as USFlag } from "./static/Flag_of_the_United_States.svg";
 
-function App() {
-	return (
-		<div className="App">
-			<header className="App-header">
-				<div
-					style={{
-						display: "flex",
-						justifyContent: "center",
-						alignItems: "center",
-						marginBottom: ".4em",
-					}}
-				>
-					<USFlag style={{ width: "4em", height: "2em" }} />
-					<div style={{ width: "1.5em" }}></div>
-					<h2 style={{ marginTop: ".4em" }}>US Coronavirus Check Calculator</h2>
-					<div style={{ width: "1.5em" }}></div>
-					<img
-						src={covid19}
-						style={{ width: "3em", height: "3em", display: "inline-block" }}
-					/>
-				</div>
-				<p>
-					The average American will receive over $1000. How much will you get?
-				</p>
-			</header>
-			<Calculator />
-			<footer>
-				Coronavirus Check Calculator by{" "}
-				<a
-					href="https://www.tannerkrewson.com/"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Tanner Krewson
-				</a>
-				<br />
-				<a
-					href="https://github.com/tannerkrewson/coronavirus-check-calculator"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					View on GitHub
-				</a>
-			</footer>
-		</div>
+class App extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {};
+	}
+	render = () => (
+		<Router>
+			<div className="App">
+				<Header />
+				<Card>
+					<Switch>
+						<Route exact path="/" component={Intro} />
+						<Route path="/calc" component={Calculator} />
+					</Switch>
+				</Card>
+
+				<footer>
+					Coronavirus Check Calculator by{" "}
+					<a
+						href="https://www.tannerkrewson.com/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Tanner Krewson
+					</a>
+					<br />
+					<a
+						href="https://github.com/tannerkrewson/coronavirus-check-calculator"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						View on GitHub
+					</a>
+				</footer>
+			</div>
+		</Router>
 	);
 }
 

@@ -19,9 +19,8 @@ class QuestionIncome extends React.Component {
 
 	render = () => (
 		<div>
-			<h3>
-				<h3>{this.props.question || "How much did you make in 2019?"}</h3>
-			</h3>
+			<h3>{this.props.question || "How much did you make in 2019?"}</h3>
+
 			<div>
 				<InputNumber
 					name="income"
