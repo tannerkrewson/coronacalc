@@ -66,6 +66,7 @@ class Calculator extends React.Component {
 						onNext={this.onNext.bind(this)}
 						formData={this.state.formData}
 					/>
+
 					<br />
 					<Button
 						type="dashed"
@@ -85,6 +86,12 @@ class Calculator extends React.Component {
 					>
 						Reset
 					</Button>
+					<br />
+					<br />
+					<div style={{ fontSize: ".8em" }}>
+						Use the information from your 2018 tax returns, if possible. More
+						details soon.
+					</div>
 				</div>
 			</div>
 		);

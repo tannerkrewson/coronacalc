@@ -13,15 +13,32 @@ class Results extends React.Component {
 	render = () => (
 		<div>
 			<p>
-				The final relief payment amounts are expected to be determined by the
-				government in the next few days. In the meantime:
+				The US government{" "}
+				<a
+					href="https://www.reuters.com/article/us-health-coronavirus-usa-congress/u-s-congress-negotiators-reach-deal-on-2-trillion-coronavirus-aid-package-idUSKBN21B18D"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					has reached a deal
+				</a>
+				, and final relief payment amounts and information on how Americans will
+				receive the money is expected to be released in the next few days. The
+				amount in the red box for the CARES Act will be closest to the final
+				amount. In the meantime:
 			</p>
 			{getCARES(this.props.formData)}
 			<br />
 			{getTRWF(this.props.formData)}
 			<br />
-			Please check my math before you get too excited or disappointed! Learn
-			about the math and other parts of the bill with the links above.
+			<p>
+				Learn about the math and the details of each bill with the links above.
+				Details on how to get the money will be added in the coming days as they
+				are released.
+			</p>
+			<p>
+				More visual details on how these numbers are determined coming soon!
+			</p>
+			<h4>Share this site: tannerkrewson.com/coronacalc</h4>
 		</div>
 	);
 }

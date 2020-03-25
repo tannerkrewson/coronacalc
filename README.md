@@ -1,6 +1,8 @@
 # Coronavirus Relief Payment Calculator
 
-### tannerkrewson.com/coronacalc
+### [tannerkrewson.com/coronacalc](https://www.tannerkrewson.com/coronacalc/)
+
+Issues and pull requests welcome!
 
 ## Available Scripts
 
