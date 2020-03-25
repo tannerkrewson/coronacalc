@@ -33,13 +33,10 @@ class Calculator extends React.Component {
 			},
 		];
 	}
-	onChange(newFormData) {
+	async onNext(newFormData) {
 		this.setState({
 			formData: { ...this.state.formData, ...newFormData },
 		});
-	}
-	async onNext() {
-		console.log(1);
 
 		do {
 			await this.setState({ questionStep: this.state.questionStep + 1 });
@@ -49,7 +46,7 @@ class Calculator extends React.Component {
 		return this.questions[this.state.questionStep] || { question: <div></div> };
 	}
 	reset() {
-		window.location.reload();
+		this.setState({ questionStep: 0 });
 	}
 	render = () => {
 		const Question = this.currentQuestion().question;
@@ -58,7 +55,6 @@ class Calculator extends React.Component {
 				<StepsOverview step={this.currentQuestion().overviewStep} />
 				<div className="Calculator-content">
 					<Question
-						onChange={this.onChange.bind(this)}
 						onNext={this.onNext.bind(this)}
 						formData={this.state.formData}
 					/>

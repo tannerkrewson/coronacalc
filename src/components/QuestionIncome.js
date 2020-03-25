@@ -5,16 +5,16 @@ class QuestionIncome extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			income: 0,
+			income: this.props.formData.income,
 		};
 	}
 
-	handleInputChange(value) {
-		const newState = {
-			income: value,
-		};
-		this.setState(newState);
-		this.props.onChange(newState);
+	handleInputChange(income) {
+		this.setState({ income });
+	}
+
+	next() {
+		this.props.onNext({ income: this.state.income });
 	}
 
 	render = () => (
@@ -30,14 +30,16 @@ class QuestionIncome extends React.Component {
 					formatter={(value) =>
 						`$ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 					}
-					parser={(value) => value.replace(/\$\s?|(,*)/g, "")}
 					value={this.state.income}
+					parser={(value) => value.replace(/\$\s?|(,*)/g, "")}
 					onChange={this.handleInputChange.bind(this)}
+					onPressEnter={this.props.onNext}
 					style={{ width: "12em" }}
+					autoFocus={true}
 				/>
 			</div>
 			<br />
-			<Button onClick={this.props.onNext}>Next</Button>
+			<Button onClick={this.next.bind(this)}>Next</Button>
 		</div>
 	);
 }

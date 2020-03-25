@@ -4,29 +4,16 @@ import { Button } from "antd";
 import QuestionSpouseIncome from "./QuestionSpouseIncome";
 
 class QuestionMarried extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			married: false,
-		};
-	}
-
-	handleInputChange(value) {
-		const isMarried = value === "yes";
-		const newState = {
-			married: isMarried,
-		};
-		this.setState(newState);
-		this.props.onChange(newState);
-		this.props.onNext();
+	next(married) {
+		this.props.onNext({ married });
 	}
 
 	render = () => (
 		<div>
 			<h3>Are you married?</h3>
 			<div>
-				<Button onClick={() => this.handleInputChange("yes")}>Yes</Button>{" "}
-				<Button onClick={() => this.handleInputChange("no")}>No</Button>
+				<Button onClick={() => this.next(true)}>Yes</Button>{" "}
+				<Button onClick={() => this.next(false)}>No</Button>
 			</div>
 		</div>
 	);

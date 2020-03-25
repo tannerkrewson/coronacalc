@@ -5,18 +5,19 @@ class QuestionDep extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			dependants: 0,
 			showInputNumber: false,
+			dependants: 0,
 		};
 	}
 
-	handleInputChange(value) {
-		const newState = {
-			dependants: value,
-		};
-		this.setState(newState);
-		this.props.onChange(newState);
-		this.props.onNext();
+	handleInputChange(dependants) {
+		this.setState({
+			dependants,
+		});
+	}
+
+	next(dependants) {
+		this.props.onNext({ dependants });
 	}
 
 	showInputNumber() {
@@ -28,17 +29,17 @@ class QuestionDep extends React.Component {
 			<h3>How many dependants do you have?</h3>
 			{!this.state.showInputNumber && (
 				<div>
-					<Button onClick={() => this.handleInputChange(0)}>None</Button>{" "}
-					<Button shape="circle" onClick={() => this.handleInputChange(1)}>
+					<Button onClick={() => this.next(0)}>None</Button>{" "}
+					<Button shape="circle" onClick={() => this.next(1)}>
 						1
 					</Button>{" "}
-					<Button shape="circle" onClick={() => this.handleInputChange(2)}>
+					<Button shape="circle" onClick={() => this.next(2)}>
 						2
 					</Button>{" "}
-					<Button shape="circle" onClick={() => this.handleInputChange(3)}>
+					<Button shape="circle" onClick={() => this.next(3)}>
 						3
 					</Button>{" "}
-					<Button shape="circle" onClick={() => this.handleInputChange(4)}>
+					<Button shape="circle" onClick={() => this.next(4)}>
 						4
 					</Button>{" "}
 					<Button onClick={() => this.showInputNumber()}>More</Button>
@@ -52,7 +53,11 @@ class QuestionDep extends React.Component {
 						max={100}
 						value={this.state.dependants}
 						onChange={this.handleInputChange.bind(this)}
+						onPressEnter={this.props.onNext}
+						autoFocus={true}
 					/>
+					<br />
+					<Button onClick={this.next.bind(this)}>Next</Button>
 				</div>
 			)}
 		</div>
