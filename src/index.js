@@ -9,6 +9,15 @@ import "antd/dist/antd.css";
 ReactDOM.render(
 	<React.StrictMode>
 		<App />
+		<style
+			dangerouslySetInnerHTML={{
+				__html: `
+						.ant-input-number-handler-wrap {
+							display: none;
+						}
+						`,
+			}}
+		/>
 	</React.StrictMode>,
 	document.getElementById("root")
 );

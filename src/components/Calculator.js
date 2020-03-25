@@ -39,6 +39,8 @@ class Calculator extends React.Component {
 		});
 	}
 	async onNext() {
+		console.log(1);
+
 		do {
 			await this.setState({ questionStep: this.state.questionStep + 1 });
 		} while (!this.currentQuestion().shouldAsk());
